@@ -1,52 +1,56 @@
-body{
-    display:flex;
+body {
+    display: flex;
     justify-content: center;
     flex-direction: column;
-    background-color: rgb(255, 255, 255);
+    background-color: #fff;
 }
-.navbar{
+
+.navbar {
     display: flex;
-    justify-content:space-evenly;
-    width:80%;
-    height:5vh;
+    justify-content: space-evenly;
+    width: 80%;
+    height: 5vh;
     align-items: center;
     background-color: rgba(102, 176, 241, 1);
     color: white;
-    border-radius:45px;
+    border-radius: 45px;
 }
 
-#logo{
-    width:40px;
-    height:auto;
-    filter: invert(30%) sepia(100%) saturate(500%) hue-rotate(200deg);
+#logo {
+    cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
-.navbarbuttons{
-    background-color:rgba(240, 255, 255, .3);
-    border:none;
-    width:100px;
-    border-radius:45px;
-    backdrop-filter: 5px;
-    color:aliceblue;
+#logo:hover {
+    transform: scale(1.1);
 }
 
-.content,.homecontent{
-    display:block;
+
+.navbarbuttons {
+    background-color: rgba(240, 255, 255, .3);
+    border: none;
+    width: 100px;
+    border-radius: 45px;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.content, .homecontent {
+    display: none;
     align-items: center;
 }
 
-.contenttitle,.label,.btns,.splash{
+.contenttitle, .label, .btns, .splash {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:rgb(102, 176, 241); 
-
+    color: rgb(102, 176, 241); 
 }
 
-.splash{
+.splash {
     font-style: italic;
 }
 
-.label,.field,.btns{
-    margin-top:10px;
+.label, .field, .btns {
+    margin-top: 10px;
 }
 
 .label {
@@ -62,17 +66,17 @@ body{
     box-sizing: border-box; 
 }
 
-.btns{
-    width:182px;
-    padding:3px;
+.btns {
+    width: 182px;
+    padding: 3px;
 }
 
-#btncontainer{
-    display:flex;
-    gap:20px;
+#btncontainer {
+    display: flex;
+    gap: 20px;
 }
 
-/* For the insertion success message */
+/* Toast message */
 #success-toast {
     position: fixed;
     top: 20px;
@@ -89,4 +93,22 @@ body{
 .toast-hidden {
     display: none;
     opacity: 0;
+}
+
+/* Table styling for Read section */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+table th {
+    background-color: rgba(102, 176, 241, 0.8);
+    color: white;
 }
